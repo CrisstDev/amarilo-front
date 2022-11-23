@@ -1,0 +1,183 @@
+.container-login {
+    display: flex;
+    height: 100%;
+
+    .left {
+        // border: 5px solid red;
+        width: 45%;
+        padding: 30px 70px 30px 70px;
+        background-image: url("/assets/final.jpg");
+        background-size: cover;
+        background-position: center;
+
+        .content-travelers {
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .left-content {
+
+                .first,
+                .second,
+                .third {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .right-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .button-transparent {
+                    border: 2px solid #ffffff99;
+                    padding: 15px 20px 15px 20px;
+                    border-radius: 20px;
+                    border-top-right-radius: 0;
+                    cursor: pointer;
+                }
+            }
+
+            .first {
+                font-size: 17px;
+            }
+
+            .second {
+                font-size: 35px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        padding: 20px;
+
+        .content {
+            // border: 5px solid red;
+            padding: 40px;
+
+            label {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            .experiences {
+                color: #ffd200;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            h1,
+            .experiences {
+                text-align: center;
+            }
+
+            .social {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .rounded {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                    background-color: #f4f7fb;
+                    margin: 10px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                }
+            }
+
+            .container-send {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .button-login {
+                    border: none;
+                    padding: 15px 20px 15px 20px;
+                    border-radius: 20px;
+                    border-top-right-radius: 0;
+                    color: white;
+                    cursor: pointer;
+                    box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.18);
+                    background-color: #ffd200;
+                }
+            }
+
+            .copyright {
+                margin-top: 100px;
+                text-align: center;
+                color: #acc0d6;
+            }
+
+            .item-password {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5px;
+            }
+        }
+
+        // border: 5px solid blue;
+    }
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #afc3d7;
+    margin: 20px;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #afc3d7;
+}
+
+.separator:not(:empty)::before {
+    margin-right: 2.25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 2.25em;
+}
+
+@media only screen and (max-width: 912px) {
+    .container-login {
+        display: block;
+
+        .left,
+        .right {
+            width: 100%;
+        }
+
+        .left {
+            height: 50%;
+
+            .map {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .container-login {
+        .left {
+            padding: 20px;
+
+            .content-travelers {
+                justify-content: center;
+            }
+        }
+    }
+}

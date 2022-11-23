@@ -1,0 +1,74 @@
+<nb-layout>
+
+    <nb-layout-column style="padding: 0px;" [nbSpinner]="isLoading" nbSpinnerStatus="primary">
+
+        <div class="container-login">
+
+            <div class="left gradient-lilo"></div>
+
+            <div class="right">
+
+                <div class="content">
+
+                    <div class="experiences">
+                        <img src="../../../assets/logo.png" width="200" draggable="" alt="">
+                    </div>
+
+                    <div class="separator">Iniciar Sesión</div>
+
+                    <form [formGroup]="formLogin">
+
+                        <nb-form-field>
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" shape="semi-round" nbInput fullWidth fieldSize="large"
+                                placeholder="Ingresa tu correo" formControlName="email">
+                        </nb-form-field>
+
+                        <br>
+
+                        <div class="item-password">
+                            <label for="password">Contraseña</label>
+                        </div>
+
+                        <nb-form-field>
+                            <input [type]="getInputType()" id="password" shape="semi-round" nbInput fullWidth
+                                fieldSize="large" placeholder="Ingresa tu contraseña" formControlName="password">
+                            <button nbSuffix nbButton ghost (click)="toggleShowPassword();">
+                                <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva"
+                                    [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                                </nb-icon>
+                            </button>
+                        </nb-form-field>
+
+                        <br>
+
+                        <div class="container-send">
+
+                            <nb-toggle status="basic" style="text-transform: uppercase;" formControlName="remindMe">
+                                <p style="color: #9ca9cd !important;">
+                                    Recordarme
+                                </p>
+                            </nb-toggle>
+
+                            <button type="submit" class="button-login" (click)="onSubmit();"
+                                [disabled]="isLoading">
+                                Entrar->
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                    <div class="copyright">
+                        Copyright &#169; {{ actualYear }} - All Rights Reserved.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nb-layout-column>
+
+</nb-layout>

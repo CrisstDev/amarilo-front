@@ -1,1 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Paralucent Medium";
+    src: url("/assets/fonts/Paralucent W00 Medium.woff");
+}
+
+* {
+    font-family: "Paralucent Medium", serif !important;
+}
+
+.gradient-lilo {
+    background: rgb(255, 210, 0);
+    background: linear-gradient(90deg, rgba(255, 210, 0, 1) 0%, rgba(255, 229, 105, 1) 100%);
+}
+
+.background-lilo {
+    background-color: #ffd200;
+}
+
+.color-lilo {
+    color: #ffd200 !important;
+}
+
+.nb-theme-default [nbInput].status-grey {
+    background-color: #edf1f7 !important;
+    border-color: #edf1f7 !important;
+    color: grey !important;
+}
+
+.nb-theme-default [nbInput].status-transparent {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: grey !important;
+}
+
+.nb-theme-default nb-progress-bar.size-tiny .progress-container {
+    height: 5px !important;
+}
+
+/* REMOVE PADDING OF LAYOUR NB */
+.nb-theme-default nb-layout .layout .layout-container .content .columns nb-layout-column {
+    padding: 0 !important;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* PLACEHOLDER IN DIFERENT BROWSERS */
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-family: "Paralucent Medium", serif !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-family: "Paralucent Medium", serif !important;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-family: "Paralucent Medium", serif !important;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-family: "Paralucent Medium", serif !important;
+}
+
+/* CUSTOM OVERFLOW */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd200;
+    border-radius: 20px;
+}
+
+/* CUSTOM BUTTONS */
+.button-gradient {
+    color: white;
+    background: rgb(255, 210, 0);
+    background: linear-gradient(90deg, rgba(255, 210, 0, 1) 0%, rgba(255, 229, 105, 1) 100%);
+}
+
+.nb-theme-default nb-spinner.status-primary .spin-circle {
+    border-top-color: #ffd200 !important;
+    border-bottom-color: #ffd200 !important;
+    border-left-color: #ffd200 !important;
+}
+
+.nb-theme-default nb-spinner.status-primary {
+    background-color: rgb(0 0 0 / 43%) !important;
+}
+
+/* STARS */
+
+@media only screen and (max-width: 700px) {
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 2px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container-profile {
+        display: block;
+        padding: 20px;
+    }
+
+    .tabset {
+        display: block !important;
+    }
+}

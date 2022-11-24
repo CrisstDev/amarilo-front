@@ -5,7 +5,11 @@ import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NbDatepickerModule, NbDialogModule, NbMenuModule, NbThemeModule, NbToastrModule } from '@nebular/theme';
+import { NbDatepickerModule, 
+  NbDialogModule, 
+  NbMenuModule, 
+  NbThemeModule, 
+  NbToastrModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import localeEs from '@angular/common/locales/es';
 

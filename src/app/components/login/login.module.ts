@@ -21,8 +21,7 @@ import { LoginComponent } from './login.component';
     NbButtonModule,
     NbToggleModule,
     NbSpinnerModule,
-    NbCardModule,
-    NbDialogModule.forRoot()
+    NbCardModule
   ]
 })
 

@@ -45,8 +45,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this._auth.currentUser;
-    if (Object.keys(this.user).length > 0) {
-      this._route.navigate(["/dashboard"]);
+    if (this.user) {
+      if (Object.keys(this.user).length > 0) {
+        this._route.navigate(["/dashboard"]);
+      }
     }
   }
 

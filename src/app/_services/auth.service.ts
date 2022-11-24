@@ -10,8 +10,6 @@ export class AuthService {
 
   private user: any = null;
 
-  @Output() public closeSession: EventEmitter<boolean> = new EventEmitter();
-
   constructor(
     private router: Router,
     private _storageService: StorageService) {
@@ -37,9 +35,7 @@ export class AuthService {
 
   async logout() {
     await this._storageService.removeItem("user")
-    await this._storageService.removeItem("auth")
     this.setUser();
-    this.closeSession.emit(false);
     this.router.navigate(['/home'], {
       queryParams: {},
     });

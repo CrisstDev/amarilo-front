@@ -1,14 +1,12 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { NbDatepickerModule, NbThemeModule, NbToastrModule } from '@nebular/theme';
+import { NbDatepickerModule, NbDialogModule, NbMenuModule, NbThemeModule, NbToastrModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 
 registerLocaleData(localeEs, 'es');
@@ -22,10 +20,12 @@ registerLocaleData(localeEs, 'es');
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NbEvaIconsModule,
     NbThemeModule.forRoot({ name: 'default' }),
     NbToastrModule.forRoot(),
     NbDatepickerModule.forRoot(),
-    NbEvaIconsModule
+    NbDialogModule.forRoot(),
+    NbMenuModule.forRoot(),
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'es' }

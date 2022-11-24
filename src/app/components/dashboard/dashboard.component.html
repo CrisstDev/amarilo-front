@@ -1,1 +1,30 @@
-<p>dashboard works! {{ user.name }}</p>
+<nb-layout>
+
+    <nb-layout-header>
+      <img src="../../../assets/logo.png" width="80" draggable="false" alt="">
+        <nb-user name="{{ user.name }}" title="Amarilo" [nbContextMenu]="items" nbContextMenuTag="my-context-menu">
+        </nb-user>
+    </nb-layout-header>
+
+    <nb-layout-column class="margin-dashboard">
+
+        <nb-card>
+            <nb-card-body>
+          
+              <nb-tabset>
+                <nb-tab tabTitle="Users" tabIcon="person-outline" responsive>
+                  <p>List of <strong>users</strong>.</p>
+                </nb-tab>
+                <nb-tab tabTitle="Orders" tabIcon="bell-outline" responsive>
+                  <p>List of <strong>orders</strong>.</p>
+                </nb-tab>
+              </nb-tabset>
+          
+            </nb-card-body>
+          </nb-card>
+
+    </nb-layout-column>
+
+    <nb-layout-footer>Contact us</nb-layout-footer>
+
+</nb-layout>

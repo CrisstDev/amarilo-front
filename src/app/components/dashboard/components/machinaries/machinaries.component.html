@@ -1,1 +1,69 @@
-<p>machinaries works!</p>
+<strong>Maquinarias</strong>
+
+<ng-container>
+    <nb-card size="small">
+        <nb-card-body>
+
+        <div class="row mb-5">
+            <nb-select placeholder="Selecciona maquinaria" [(selected)]="machinarySelected" (selectedChange)="onSelected();">
+                <nb-option value="">Ninguna</nb-option>
+                <nb-option *ngFor="let element of machinaries" value="{{element.id}}">{{ element.type }}</nb-option>
+              </nb-select>
+        </div>
+
+          <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 col-sm-12">
+                    <nb-card>
+                        <nb-card-header>DISPONIBLES</nb-card-header>
+                        <nb-card-body>
+                            <strong>{{ countStock.available }}</strong>
+                        </nb-card-body>
+                        <nb-card-footer>Amarilo</nb-card-footer>
+                      </nb-card>
+                </div>
+                <div class="col-xl-4 col-md-4 col-sm-12">
+                    <nb-card>
+                        <nb-card-header>OCUPADAS</nb-card-header>
+                        <nb-card-body>
+                            <strong>{{ countStock.busy }}</strong>
+                        </nb-card-body>
+                        <nb-card-footer>Amarilo</nb-card-footer>
+                      </nb-card>
+                </div>
+                <div class="col-xl-4 col-md-4 col-sm-12">
+                    <nb-card>
+                        <nb-card-header>REPARACIÓN</nb-card-header>
+                        <nb-card-body>
+                            <strong>{{ countStock.onRepair }}</strong>
+                        </nb-card-body>
+                        <nb-card-footer>Amarilo</nb-card-footer>
+                      </nb-card>
+                </div>
+            </div>
+          </div>
+
+        </nb-card-body>
+      </nb-card>
+</ng-container>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Peso</th>
+        <th>Numero de motor</th>
+        <th>Numero de chasis</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of allStock">
+        <th>{{ item.id }}</th>
+        <td>{{ item.machinery_relation.weight }}</td>
+        <td>{{ item.engine_number }}</td>
+        <td>{{ item.chassis_number }}</td>
+        <td>{{ displayStatus(item.status) }}</td>
+      </tr>
+    </tbody>
+  </table>

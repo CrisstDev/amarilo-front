@@ -64,4 +64,14 @@ export class DashboardService {
     );
   }
 
+  findAllStockByMachinary(query: { id: number }) {
+    return this.http.get<any>(
+      `${environment.api}machineries/detail`, { params: query }
+    ).pipe(map((res: any) => { return res; }),
+      catchError(handleError)
+    );
+  }
+
+  
+
 }
